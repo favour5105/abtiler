@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AB Tiler | Professional Tiling Services</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f5f5f5, #eaeaea);
+}
+
+/* Hover cards */
+.card {
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+}
+.slider img {
+    height: 250px;
+    border-radius: 12px;
+    scroll-snap-align: start;
+}
+
+/* WhatsApp button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Fade animation */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="p-10 text-center bg-black text-white">
+    <h1 class="text-4xl font-bold mb-4">AB Tiler</h1>
+    <p class="text-lg mb-6">Professional Floor & Wall Tiling in Nigeria</p>
+    <a href="https://wa.me/2348120165105"
+       class="bg-orange-500 px-6 py-3 rounded-full text-lg">
+       Chat on WhatsApp
+    </a>
+</section>
+
+<!-- SERVICES -->
+<section class="p-10">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">
+        Our Services
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="card bg-white p-5 shadow rounded">
+            <img src="floor.jpg" class="mb-3 rounded">
+            <h3 class="font-bold text-lg">Floor Tiling</h3>
+        </div>
+
+        <div class="card bg-white p-5 shadow rounded">
+            <img src="bathroom.jpg" class="mb-3 rounded">
+            <h3 class="font-bold text-lg">Bathroom Tiling</h3>
+        </div>
+
+        <div class="card bg-white p-5 shadow rounded">
+            <img src="tiles-display.jpg" class="mb-3 rounded">
+            <h3 class="font-bold text-lg">Wall Designs</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- SLIDER -->
+<section class="p-10">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">
+        Featured Work
+    </h2>
+
+    <div class="slider">
+        <img src="floor.jpg">
+        <img src="bathroom.jpg">
+        <img src="tiles-display.jpg">
+        <img src="floor.jpg">
+    </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section class="p-10 bg-gray-100">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">
+        Before & After
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+        <img src="before.jpg" class="rounded shadow">
+        <img src="floor.jpg" class="rounded shadow">
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="p-10">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">
+        Pricing
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="card bg-white shadow rounded p-6 text-center">
+            <h3 class="text-xl font-bold">Basic</h3>
+            <p class="text-2xl text-orange-500 mt-3">₦3,000/m²</p>
+        </div>
+
+        <div class="card bg-orange-500 text-white shadow rounded p-6 text-center">
+            <h3 class="text-xl font-bold">Standard</h3>
+            <p class="text-2xl mt-3">₦5,000/m²</p>
+        </div>
+
+        <div class="card bg-white shadow rounded p-6 text-center">
+            <h3 class="text-xl font-bold">Premium</h3>
+            <p class="text-2xl text-orange-500 mt-3">₦8,000/m²</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="p-10 bg-gray-100">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">
+        Client Reviews
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-5 shadow rounded">
+            "Very clean work!"
+        </div>
+        <div class="bg-white p-5 shadow rounded">
+            "Fast and professional"
+        </div>
+        <div class="bg-white p-5 shadow rounded">
+            "Highly recommended"
+        </div>
+    </div>
+</section>
+
+<!-- BOOKING -->
+<section class="p-10">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">
+        Book a Job
+    </h2>
+
+    <form id="bookingForm" class="grid md:grid-cols-2 gap-6">
+
+        <input id="name" type="text" placeholder="Your Name" class="p-3 border rounded">
+        <input id="phone" type="tel" placeholder="Phone Number" class="p-3 border rounded">
+
+        <input id="location" type="text" placeholder="Location" class="p-3 border rounded">
+        <input id="work" type="text" placeholder="Type of Work" class="p-3 border rounded">
+
+        <textarea id="details" placeholder="Describe your project..." class="p-3 border rounded md:col-span-2"></textarea>
+
+        <button type="submit" class="bg-orange-500 text-white px-6 py-3 rounded md:col-span-2">
+            Submit Request
+        </button>
+
+    </form>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/2348120165105" class="whatsapp-float">
+💬
+</a>
+
+<!-- SCRIPT -->
+<script>
+// Animation
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const pos = sec.getBoundingClientRect().top;
+        if(pos < window.innerHeight - 100){
+            sec.style.opacity = 1;
+            sec.style.transform = "translateY(0)";
+        }
+    });
+});
+
+// WhatsApp booking system
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let location = document.getElementById("location").value;
+    let work = document.getElementById("work").value;
+    let details = document.getElementById("details").value;
+
+    let message = `Hello, I want to book a tiling job.%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Location: ${location}%0A
+Work: ${work}%0A
+Details: ${details}`;
+
+    window.open(`https://wa.me/2348120165105?text=${message}`, "_blank");
+});
+</script>
+
+</body>
+</html>
